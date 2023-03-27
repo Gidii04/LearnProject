@@ -1,0 +1,241 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+  --clr-primary: rgb(20, 212, 20);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+body {
+  width: 100%;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+/* HEADER */
+nav {
+  box-shadow: var(--light-shadow);
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: var(--light-shadow);
+  transition: all 0.1s ease;
+}
+.nav-disp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(20, 212, 20);
+  padding: 1rem;
+}
+.bars {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.bars.rotate {
+  transform: rotate(90deg);
+  transition: all 0.5s ease;
+}
+.nav-name {
+  display: flex;
+  align-items: center;
+  color: rgb(20, 212, 20);
+}
+.links-container {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.show-links {
+  height: 250px;
+}
+
+.links a {
+  background: white;
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 0.054rem;
+  display: block;
+  transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
+  text-decoration: none;
+}
+.links:has(li.btn) {
+  color: var(--clr-primary);
+}
+.links li {
+  list-style: none;
+}
+.btn {
+  border: 1px solid rgb(20, 212, 20);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: var(--clr-primary);
+  font-weight: bold;
+  background: white;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.short {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 50px;
+  padding: 0.2rem 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--light-shadow);
+}
+
+u {
+  width: 1px;
+  height: 25px;
+  margin: 5px 8px;
+  background: rgb(110, 110, 110);
+}
+
+.learn {
+  color: rgb(20, 212, 20);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section h1 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+
+.long {
+  font-size: 0.9rem;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+  color: grey;
+}
+
+.explore {
+  background: var(--clr-primary);
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+.img-folder {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1rem 2rem;
+}
+
+.img {
+  width: 30rem;
+  border-radius: 5px;
+}
+
+.items h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.items p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: grey;
+}
+
+.items a {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
+  .img-folder {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .img {
+    width: 18rem;
+    height: 192px;
+  }
+  .items p {
+    max-width: 18rem;
+  }
+  .nav-center {
+    width: 90vw;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .nav-disp {
+    padding: 0;
+  }
+  .links {
+    display: flex;
+  }
+
+  .links li {
+    list-style: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+    margin: 0 1rem;
+  }
+
+  .links a:not(.btn) {
+    text-decoration: none;
+    color: black;
+  }
+  /* .btn {
+    border: 1px solid rgb(20, 212, 20);
+    padding: 0.75rem;
+    font-size: 0.5rem;
+    color: var(--clr-primary);
+    font-weight: bold;
+    background: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  } */
+  .bars {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+}
+
+/* @media screen and (max-width: 956px) {
+  .nav-center {
+    font-size: 0.5rem;
+  }
+} */
