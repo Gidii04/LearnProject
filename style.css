@@ -62,9 +62,9 @@ nav {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-/* .show-links {
+.show-links {
   height: 250px;
-} */
+}
 
 .links a {
   background: white;

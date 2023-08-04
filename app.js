@@ -40,6 +40,7 @@ window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar')
   const windowHeight = window.pageYOffset
   const navHeight = navbar.getBoundingClientRect().height
+  // console.log(navHeight)
   if (windowHeight > 87) {
     navbar.classList.add('fixed-nav')
   } else {
@@ -60,8 +61,8 @@ class showlinks {
 const showLinksInstance = new showlinks()
 showLinksInstance.showlinks()
 
+//rotate functionality
 const bars = document.querySelector('.bars')
-
 bars.addEventListener('click', () => {
   bars.classList.toggle('rotate')
 })
